@@ -1,19 +1,36 @@
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.junit.runner.RunWith;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
+
 public class ArrayUtilTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(ArrayUtil.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+
+    @Test
+    public void shouldReturnMinimum(){
+        //given
+        int[] initial = {9,1,3,7,5,2,6,8,4};
+
+        //when
+        int ret = ArrayUtil.findMinimum(initial);
+
+        //then
+        System.out.println("min: "+ ret);
+        assertEquals(1, ret);
+
     }
+
+    @Test
+    public void shouldReturnMaximum(){
+        //given
+        int[] initial = {9,1,3,7,5,2,6,8,4};
+
+        //when
+        int ret = ArrayUtil.findMaximum(initial);
+
+        //then
+        System.out.println("max: "+ ret);
+        assertEquals(9, ret);
+    }
+
 
 }

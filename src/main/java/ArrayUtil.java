@@ -9,4 +9,16 @@ public class ArrayUtil {
         }
         return min;
     }
+
+    public static int findMaximum(int[] aTable){
+        int max = aTable[0];
+
+        for (int i = 1; i < aTable.length; i++) {
+            if (aTable[i] > max) {
+                max = aTable[i];
+            }
+        }
+
+        return max;
+    }
 }
