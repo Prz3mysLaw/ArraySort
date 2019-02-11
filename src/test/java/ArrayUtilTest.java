@@ -45,5 +45,20 @@ public class ArrayUtilTest {
         assertEquals(new Pair(1,1), ret);
     }
 
+    @Test
+    public void shouldReturMinimumAndIndexWithExcludeIndexZero(){
+        //given
+        int[] initial = {1, 2, 3, 7, 5, 9, 6, 8, 4};
+
+        //when
+        int startIndex = 3;
+        Pair ret = ArrayUtil.findMinimumAndIndex(startIndex, initial);
+
+        //then
+        assertEquals(new Pair(8, 4), ret);
+
+
+    }
+
 
 }
