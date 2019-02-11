@@ -37,6 +37,12 @@ public class ArrayUtil {
     public static Pair findMinimumAndIndex(int aStartInex, int[] aTable){
         int min = aTable[aStartInex];
         int index = aStartInex;
+        for (int i = aStartInex+1; i < aTable.length; i++) {
+            if (aTable[i] < min){
+                min = aTable[i];
+                index = i;
+            }
+        }
 
         return new Pair(index, min);
     }
