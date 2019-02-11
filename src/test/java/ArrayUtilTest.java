@@ -33,4 +33,17 @@ public class ArrayUtilTest {
     }
 
 
+    @Test
+    public void shouldReturnMinimumAndIndex(){
+        //given
+        int[] initial = {9,1,3,7,5,2,6,8,4};
+
+        //when
+        Pair ret = ArrayUtil.findMinimumAndIndex(initial);
+
+        //then
+        assertEquals(new Pair(1,1), ret);
+    }
+
+
 }

@@ -21,4 +21,16 @@ public class ArrayUtil {
 
         return max;
     }
+
+    public static Pair findMinimumAndIndex(int[] aTable){
+        int min = aTable[0];
+        int index = 0;
+        for (int i = 1; i < aTable.length; i++) {
+            if (aTable[i] < min){
+                min = aTable[i];
+                index = i;
+            }
+        }
+        return new Pair(index, min);
+    }
 }
