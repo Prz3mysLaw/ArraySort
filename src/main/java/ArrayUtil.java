@@ -33,4 +33,11 @@ public class ArrayUtil {
         }
         return new Pair(index, min);
     }
+
+    public static Pair findMinimumAndIndex(int aStartInex, int[] aTable){
+        int min = aTable[aStartInex];
+        int index = aStartInex;
+
+        return new Pair(index, min);
+    }
 }
